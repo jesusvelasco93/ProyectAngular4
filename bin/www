@@ -1,0 +1,12 @@
+var app = require('../app');
+var debug = require('debug')('proyectoalarmaweb:server');
+var http = require('http');
+
+
+// Elegir puerto y levantar servidor
+var port = 80;
+app.set('port', port);
+
+var server = http.createServer(app);
+
+server.listen(port);
