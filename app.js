@@ -14,10 +14,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Ficheros de Rutas
-var index = require('./routes/index');
+var alarma = require('./routes/alarma');
+var usuario = require('./routes/usuario');
 
 // Rutas de Contenido
-app.use('/', index);
+app.use('/api/alarma/', alarma);
+app.use('/api/usuario/', usuario);
 
 
 // error handler
